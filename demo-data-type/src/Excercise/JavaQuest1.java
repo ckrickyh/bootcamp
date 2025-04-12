@@ -75,5 +75,10 @@ public class JavaQuest1 {
     // code here ... define the x and assign value to it
     int result = e - o * x / y;
     System.out.println("The result is " + result);
+
+
+
+
+
+    }
   }
-}
