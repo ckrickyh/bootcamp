@@ -14,11 +14,11 @@ public class JavaQuest4 {
 
     // code here ...
     //variable setting
-    int divX = 2;
-    int divY = 3;
+    int divByX = 2;
+    int divByY = 3;
     int maxPrintTimes = 10;
     int startPrintTimes = 0;
-    int currentPrintTimes = -1;
+    int currentPrintTimes = startPrintTimes - 1;
     int i = 1;
     String outPut = "";
 
@@ -26,8 +26,8 @@ public class JavaQuest4 {
     //looping
     while (startPrintTimes < maxPrintTimes) { //while loop start
       while (currentPrintTimes < startPrintTimes) { //while %2 and %3 == 0 success, currentTimes +1
-        if (i % divX == 0) {
-          if (i % divY == 0) {
+        if (i % divByX == 0) {
+          if (i % divByY == 0) {
             outPut += i + " ";
             currentPrintTimes++;
             System.out.println("currentPrintTime: " + currentPrintTimes);
@@ -36,7 +36,7 @@ public class JavaQuest4 {
         i++;
         System.out.println("i: " + i);
       }
-      startPrintTimes++;  //startPrintTime +1 when currentPrintTime +1
+      startPrintTimes++;  //when currentPrintTimes +1, startPrintTimes +1 
     } //while loop end
     System.out.println(outPut);
   }
