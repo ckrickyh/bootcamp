@@ -11,22 +11,33 @@ public class JavaQuest4 {
     // 2. Divisible by 3
     // 3. > 0
 
-    int start = 0;
-    int end = 100;
+
+    // code here ...
+    //variable setting
+    int divX = 2;
+    int divY = 3;
+    int maxPrintTimes = 10;
+    int startPrintTimes = 0;
+    int currentPrintTimes = -1;
+    int i = 1;
     String outPut = "";
 
-    for (int i = start + 1; i < end; i++) {
-      // code here ...
-      if (i % 2 == 0) {
-        if (i % 3 == 0){
-          //System.out.println(i);
-          outPut += i + " ";
-          if (i == 60) {
-            break;
+    //!limitation in unkown end-range situtation, that's mean NOT defining end-range is requried
+    //looping
+    while (startPrintTimes < maxPrintTimes) { //while loop start
+      while (currentPrintTimes < startPrintTimes) { //while %2 and %3 == 0 success, currentTimes +1
+        if (i % divX == 0) {
+          if (i % divY == 0) {
+            outPut += i + " ";
+            currentPrintTimes++;
+            System.out.println("currentPrintTime: " + currentPrintTimes);
           }
         }
+        i++;
+        System.out.println("i: " + i);
       }
-    }
+      startPrintTimes++;  //startPrintTime +1 when currentPrintTime +1
+    } //while loop end
     System.out.println(outPut);
   }
 }

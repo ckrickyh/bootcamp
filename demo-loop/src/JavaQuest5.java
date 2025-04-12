@@ -11,10 +11,12 @@ public class JavaQuest5 {
     // if not found, print "Not Found."
     // code here ...
     int count = 0;
+    int lastLoc = 0;
 
     for (int i = 0; i < str.length(); i++) {
       if (str.charAt(i) == target) {
         count++;
+        lastLoc = i;
       }
     }
     if (count == 0) {
@@ -22,6 +24,7 @@ public class JavaQuest5 {
 
     } else {
       System.out.println("Found " + count + " c words");
+      System.out.println("The index of the last character of c is " + lastLoc);
     }
     
   }
