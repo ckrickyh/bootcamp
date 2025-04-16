@@ -39,5 +39,6 @@ public class JavaQuest4 {
       startPrintTimes++;  //when currentPrintTimes +1, startPrintTimes +1 
     } //while loop end
     System.out.println(outPut);
+    System.out.println(10.0/3.0);
   }
 }

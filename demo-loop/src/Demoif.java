@@ -18,9 +18,6 @@ public class Demoif {
     a = s.equals("hello");
     System.out.println(a);
 
-
-
-    
     boolean isFemale = true;
     boolean isSmoker = false;
     int age = 15;
@@ -69,7 +66,30 @@ public class Demoif {
     System.out.println(premium);
 
 
-    //
+    // equals
+    String w = "Java";
+    if (w.equals("Java")) {
+      System.out.println("it is Java");
+    }
     
+    //!正統java 寫法, obj 驗証法
+    if ("Java".equals(w)) {
+      System.out.println("It is Java");
+    }
+
+    // for + if
+    //char x;
+    String result = "";
+    int y;
+    String s4 = "Goodbye";
+    for (int i = 0; i < s4.length(); i++) {
+      y = s4.charAt(i);
+      if (y > 90) {
+        //System.out.println(y);
+        //System.out.println(s4.charAt(i));
+        result += s4.charAt(i);
+      }
+    }
+    System.out.println(result);
   }
 }
