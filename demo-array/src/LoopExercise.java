@@ -54,7 +54,6 @@ public class LoopExercise {
     }
     System.out.println(sumResult);
 
-
     // 6. sum up all odd numbers betwen 0 - 10
     // Sum up all even numbers betwen 0 - 10
     // Find the product of evenSum and oddSum
@@ -72,7 +71,7 @@ public class LoopExercise {
         evenSum += i;
       }
     }
-    productSum = oddSum * oddSum;
+    productSum = oddSum * evenSum;
     System.out.println("sum up all odd numbers betwen 0 - 10: " + productSum);
 
 
@@ -121,8 +120,8 @@ public class LoopExercise {
     char c9 = 'p';
     int count = 0;
     System.out.println("9. Count the number of char value in the given String s9");
-    for (int i = 0; i < s9.length(); i++) { //! .equals無效
-      if(s9.charAt(i) == (c9)) {
+    for (int i = 0; i < s9.length(); i++) { 
+      if(s9.charAt(i) == (c9)) { //! .equals無效
         count ++;
       }
     }
@@ -189,7 +188,6 @@ public class LoopExercise {
     System.out.println("13. Given a string value s13, each of the char value has its score.");
     String s13 = "lrlaudbucp";
     char txtScores;
-    int sumResults = 0;
 
     int score = 0;
     for (int i = 0; i < s13.length(); i++) {
@@ -237,7 +235,8 @@ public class LoopExercise {
     System.out.println(maxValue);
 
     // 16. Declare a float value (arr16) array with value 0.2, 0.3, 0.6
-    double[] arrDou = new double[] {0.2, 0.3, 0.6};
+    float[] arrDou = new float[] {0.2f, 0.3f, 0.6f};
+    //double[] arrDou = new double[] {0.2, 0.3, 0.6};
     float[] arr16 = new float[arrDou.length];
 
     for (int i = 0; i < arr16.length; i++) {
@@ -250,12 +249,16 @@ public class LoopExercise {
     // Print: [0.3, 0.4, 0.7]
     // Use: BigDecimal
     System.out.println("17. Add value 0.1 to each of value in array arr16");
-    BigDecimal bdAdd = BigDecimal.valueOf((float) 0.1);
+    //float[] arrFloats = new float[3];
+    BigDecimal bdAdd = BigDecimal.valueOf(0.1f);
     for (int i = 0; i < arr16.length; i++) {
+      System.out.println("arr[i]: " + arr16[i]);
       arr16[i] = BigDecimal.valueOf(arr16[i]).add(bdAdd).floatValue();
+      //arrFloats[i] = BigDecimal.valueOf(arr16[i]).add(bdAdd).floatValue();
       // change to floatValue
     }
     System.out.println(Arrays.toString(arr16));
+    //System.out.println(Arrays.toString(arrFloats));
 
     // 18. Count the number of target strings in the String[]
     System.out.println("18. Count the number of target strings in the String[]");
@@ -321,6 +324,5 @@ public class LoopExercise {
       }
     }
     System.out.println("longest="+arr20[longestIndex]);
- 
   }
 }
